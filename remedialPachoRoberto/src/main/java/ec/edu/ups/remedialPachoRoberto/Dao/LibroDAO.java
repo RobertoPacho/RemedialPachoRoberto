@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import ec.edu.ups.remedialPachoRoberto.modelo.Autor;
 import ec.edu.ups.remedialPachoRoberto.modelo.Categoria;
 import ec.edu.ups.remedialPachoRoberto.modelo.Libro;
 
@@ -24,10 +25,16 @@ public class LibroDAO {
 		return true;
 	}
 	
-	public List<Categoria> findAll() throws Exception {
+	public List<Categoria> findCategorias() throws Exception {
 		String jpql="Select c from Categoria c";
 		Query q = em.createQuery(jpql,Categoria.class);
 		return (List<Categoria>) q.getResultList();
+	}
+	
+	public List<Autor> findAutor() throws Exception {
+		String jpql="Select a from Autor a";
+		Query q = em.createQuery(jpql,Autor.class);
+		return (List<Autor>) q.getResultList();
 	}
 
 
