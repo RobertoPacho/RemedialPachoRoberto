@@ -4,6 +4,7 @@
 package ec.edu.ups.remedialPachoRoberto.ON;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -28,10 +29,12 @@ public class LibroON {
 	}
 	
 	public List<Autor> listaAutor() throws Exception {
+		
 		return libroDAO.findAutor();
 	}
 	
 	public List<Categoria> listaCategoria() throws Exception {
+		
 		return libroDAO.findCategorias();
 	}
 

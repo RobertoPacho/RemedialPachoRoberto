@@ -177,13 +177,23 @@ p {
 				<div style="margin-left: 1%; margin-top: 5%;">
 					<h:form>
 						<h:panelGrid columns="2" cellpadding="5">
-					    				rol:
-					<h:selectOneMenu id="rol" value="#{libroBean.categoria}">
-						<f:selectItems value="#{libroBean.categorias()}" />
-					</h:selectOneMenu>
-
-							<h:commandButton value="GUARDAR"
-								action="#{libroBean.pruba()}" />
+						Libro:
+						<h:inputText id="nombre" value="#{libroBean.nombre}"
+						style="border: #000000 1px solid;" />
+						
+						
+					    Cartegoria:
+						<h:selectOneMenu id="categoria" value="#{libroBean.categoria}">
+							<f:selectItems value="#{libroBean.categorias()}" />
+						</h:selectOneMenu>
+						
+						Autor:
+						<h:selectOneMenu id="autor" value="#{libroBean.nombrea}">
+							<f:selectItems value="#{libroBean.autores()}" />
+						</h:selectOneMenu>
+	
+								<h:commandButton value="GUARDAR"
+									action="#{libroBean.pruba()}" />
 
 
 						</h:panelGrid>
